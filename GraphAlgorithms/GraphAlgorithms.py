@@ -169,4 +169,6 @@ class Graph():
     
     # --------------------------------- A* SEARCH ---------------------------------
     def AStar_tree(self, start: int) -> List[int]:
+        # Nah bro i give up. (╯°□°）╯︵ ┻━┻
+        # I've been staring at the screen for 2 hours watching an indian guy explain heuristic values. ༼ つ ◕_◕ ༽つ
         pass
