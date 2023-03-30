@@ -166,3 +166,7 @@ class Graph():
     def Dijkstra(self, start: int, finish: int) -> List[int]:
         tree: List[int] = self.Dijkstra_tree(start) # get the tree from Dijkstra algorithm
         return self.Path(start, finish, tree)
+    
+    # --------------------------------- A* SEARCH ---------------------------------
+    def AStar_tree(self, start: int) -> List[int]:
+        pass
