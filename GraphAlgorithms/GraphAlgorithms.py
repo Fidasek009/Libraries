@@ -64,7 +64,7 @@ class Graph():
 
     # --------------------------------- BUILD GRAPH ---------------------------------
     def build(self, graph: Union[dict[List[List[int]]], dict[List[int]]]) -> None:
-        self.vertices = [[] for i in range(self.vertex_count)]
+        self.vertices = [[] for _ in range(self.vertex_count)]
         for vertex in graph:
             for edge in graph[vertex]:
                 try:
@@ -89,8 +89,8 @@ class Graph():
 
     # --------------------------------- BREADTH FIRST SEARCH ---------------------------------
     def BFS_tree(self, start: int) -> List[int]:
-        visited: List[bool] = [False for i in range(self.vertex_count)]
-        tree: List[int] = [-1 for i in range(self.vertex_count)]
+        visited: List[bool] = [False for _ in range(self.vertex_count)]
+        tree: List[int] = [-1 for _ in range(self.vertex_count)]
         queue: List[int] = []
         v: int # current vertex
 
@@ -116,8 +116,8 @@ class Graph():
 
     # --------------------------------- DEPTH FIRST SEARCH ---------------------------------
     def DFS_tree(self, start: int) -> List[int]:
-        visited: List[bool] = [False for i in range(self.vertex_count)]
-        tree: List[int] = [-1 for i in range(self.vertex_count)]
+        visited: List[bool] = [False for _ in range(self.vertex_count)]
+        tree: List[int] = [-1 for _ in range(self.vertex_count)]
         stack: List[int] = []
         v: int # current vertex
 
@@ -143,8 +143,8 @@ class Graph():
 
     # --------------------------------- DIJKSTRA SEARCH ---------------------------------
     def Dijkstra_tree(self, start: int) -> List[int]:
-        distance: List[int] = [INF for i in range(self.vertex_count)] # distance from start node
-        tree: List[int] = [-1 for i in range(self.vertex_count)]
+        distance: List[int] = [INF for _ in range(self.vertex_count)] # distance from start node
+        tree: List[int] = [-1 for _ in range(self.vertex_count)]
         queue: List[int] = []
         v: int # current vertex
 
