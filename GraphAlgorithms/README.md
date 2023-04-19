@@ -75,3 +75,24 @@ Used for finding the shortest path in a weighted graph
 ```
 g.Dijkstra(0, 3)
 ```
+
+### A* algorithm
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Astar_progress_animation.gif" width="250" height="250"><br>
+Used for finding the shortest path around an obstacle<br><br>
+**this algorithm has a SEPERATE library** `AStar.py`
+```
+    maze: list[list[bool]] = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+                              [0, 0, 0, 0, 1, 0, 0, 0, 0, 0]]
+    
+    start: tuple[int] = (0, 0)  # Y, X
+    end: tuple[int] = (0, 9)    # Y, X
+
+    m = Maze(maze, diagonalMovement=False)
+    path: list[tuple[int]] = m.astar(start, end)
+```
